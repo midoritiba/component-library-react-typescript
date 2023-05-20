@@ -1,0 +1,41 @@
+{
+  "name": "component-library-4",
+  "version": "1.0.0",
+  "description": "https://javascript.plainenglish.io/build-a-react-component-library-using-typescript-storybook-86d3562aa53a",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.12",
+    "@storybook/addon-interactions": "^7.0.12",
+    "@storybook/addon-links": "^7.0.12",
+    "@storybook/blocks": "^7.0.12",
+    "@storybook/react": "^7.0.12",
+    "@storybook/react-webpack5": "^7.0.12",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/node": "^20.2.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.12",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
